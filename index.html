@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Portfolio</title>
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/handlebars-v1.3.0.js"></script>
+
+</head>
+<body>
+  <header id="header" class="portfolio-header clearfix">
+    <script id="profile-template" type="text/x-handlebars-template">
+      <figure class="profile-avatar"><img src="{{user.images.[138]}}" alt=""></figure>
+      <h1 class="profile-name">{{user.display_name}}</h1>
+      <div class="profile-fields">
+        <ul class="field-list">
+        {{#each user.fields}}
+          <li class="field-item">{{this}}</li>
+        {{/each}}
+        </ul>
+      </div>
+      <div class="profile-location fi-marker">{{user.city}}, {{user.country}}</div>
+    </script>
+  </header>
+
+  <div id="content" class="content-area clearfix">
+    <div id="portfolio" class="portfolio-area clearfix">
+      <script id="portfolio-template" type="text/x-handlebars-template">
+        <ul class="portfolio-list clearfix">
+        {{#each projects}}
+          <li class="portfolio-item">
+            <div class="portfolio-content">
+              <figure class="portfolio-cover" title="{{this.name}}">
+                {{#if this.covers.[404]}}
+                  <img class="portfolio-image" src="{{this.covers.[404]}}" alt="">
+                {{else}}
+                  {{#if this.covers.[230]}}
+                    <img class="portfolio-image" src="{{this.covers.[230]}}" alt="">
+                  {{else}}
+                    <img class="portfolio-image" src="{{this.covers.[202]}}" alt="">
+                  {{/if}}
+                {{/if}}
+              </figure>
+              <h2 class="portfolio-title">{{this.name}}</h2>
+              <div class="portfolio-fields">
+                <ul class="field-list">
+                {{#each this.fields}}
+                  <li class="field-item">{{this}}</li>
+                {{/each}}
+                </ul>
+              </div>
+            </div>
+          </li>
+        {{/each}}
+        </ul>
+      </script>
+    </div>
+  </div>
+
+  <footer id="footer" class="portfolio-footer clearfix">
+    <div id="power" class="power-by">
+      <p>Powered by</p>
+      <p><a class="power-logo fi-social-behance" href="http://www.behance.net/" title="Behance" target="_blank">Behance</a></p>
+    </div>
+  </footer>
+
+  <script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
+
