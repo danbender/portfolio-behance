@@ -1,8 +1,8 @@
-Portfolio-Website:
+Portfolio website
 
-The following technology is used:
+The following technologies are used:
 * Behance API
-* HTML5 Offline Storage
 * jQuery
+* HTML5 SessionStorage
 * Handlebars.js
 
