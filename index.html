@@ -26,6 +26,11 @@
   <div id="content" class="content-area clearfix">
     <div id="portfolio" class="portfolio-area clearfix">
       <script id="portfolio-template" type="text/x-handlebars-template">
+        <ul class="portfolio-list clearfix">
+        {{#each projects}}
+          <li class="portfolio-item"></li>
+        {{/each}}
+        </ul>
       </script>
     </div>
   </div>
