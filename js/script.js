@@ -1,7 +1,6 @@
 var apiKey  = 'oO3cnEECOzCm9o2qp3OdVa0A1z0gfZx2';
 var userID  = 'danbender';
 
-
 (function() {
     var behanceUserAPI = 'http://www.behance.net/v2/users/'+ userID +'?callback=?&api_key='+ apiKey;
     function setUserTemplate() {
