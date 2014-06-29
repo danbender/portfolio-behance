@@ -9,6 +9,18 @@
 </head>
 <body>
   <header id="header" class="portfolio-header clearfix">
+    <script id="profile-template" type="text/x-handlebars-template">
+      <figure class="profile-avatar"><img src="{{user.images.[138]}}" alt=""></figure>
+      <h1 class="profile-name">{{user.display_name}}</h1>
+      <div class="profile-fields">
+        <ul class="field-list">
+        {{#each user.fields}}
+          <li class="field-item">{{this}}</li>
+        {{/each}}
+        </ul>
+      </div>
+      <div class="profile-location fi-marker">{{user.city}}, {{user.country}}</div>
+    </script>
   </header>
 
   <div id="content" class="content-area clearfix">
@@ -19,3 +31,4 @@
 
 </body>
 </html>
+
