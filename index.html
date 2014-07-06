@@ -38,7 +38,7 @@
         {{#each projects}}
           <li class="portfolio-item">
             <div class="portfolio-content">
-              <figure class="portfolio-cover" title="{{this.name}}">
+              <figure class="portfolio-cover" title="{{this.name}}" data-project-id="{{this.id}}">
                 {{#if this.covers.[404]}}
                   <img class="portfolio-image" src="{{this.covers.[404]}}" alt="">
                 {{else}}
