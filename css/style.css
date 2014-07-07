@@ -195,3 +195,15 @@ figure {
   }
 }
 
+
+
+/* Animate lightbox */
+
+.keyframes(~'fadeInRight, 0% { transform: translateX(20px); opacity: 0; } 100% { transform: translateX(0); opacity: 1; }');
+.keyframes(~'fadeInLeft, 0% { transform: translateX(-20px); opacity: 0; } 100% { transform: translateX(0); opacity: 1; }');
+
+.keyframes(~'fadeOutRight, 0% { transform: translateX(0); opacity: 1; } 100% { transform: translateX(20px); opacity: 0; }');
+.keyframes(~'fadeOutLeft, 0% { transform: translateX(0); opacity: 1; } 100% { transform: translateX(-20px); opacity: 0; }');
+
+.keyframes(~'fadeInDown, 0% { transform: translateY(-20px); opacity: 0; } 100% { transform: translateY(0); opacity: 1; }');
+.keyframes(~'fadeOutDown, 0% { transform: translateY(0); opacity: 1; } 100% { transform: translateY(20px); opacity: 0; }');
